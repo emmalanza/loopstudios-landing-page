@@ -1,0 +1,94 @@
+---
+import DeepEarthImageD from "../assets/images/desktop/image-deep-earth.jpg";
+import GridImageD from "../assets/images/desktop/image-grid.jpg";
+import NightArcadeImageD from "../assets/images/desktop/image-night-arcade.jpg";
+import SoccerImageD from "../assets/images/desktop/image-soccer-team.jpg";
+import FromAboveImageD from "../assets/images/desktop/image-from-above.jpg";
+import BorealisImageD from "../assets/images/desktop/image-pocket-borealis.jpg";
+import CuriosityImageD from "../assets/images/desktop/image-curiosity.jpg";
+import FisheyeImageD from "../assets/images/desktop/image-fisheye.jpg";
+
+import DeepEarthImageM from "../assets/images/mobile/image-deep-earth.jpg";
+import GridImageM from "../assets/images/mobile/image-grid.jpg";
+import NightArcadeImageM from "../assets/images/mobile/image-night-arcade.jpg";
+import SoccerImageM from "../assets/images/mobile/image-soccer-team.jpg";
+import FromAboveImageM from "../assets/images/mobile/image-from-above.jpg";
+import BorealisImageM from "../assets/images/mobile/image-pocket-borealis.jpg";
+import CuriosityImageM from "../assets/images/mobile/image-curiosity.jpg";
+import FisheyeImageM from "../assets/images/mobile/image-fisheye.jpg";
+
+const creations: any [] = [
+    {
+        name: "DEEP<br>EARTH",
+        imgDesktop: DeepEarthImageD,
+        imgMobile: DeepEarthImageM
+    },
+    {
+        name: "NIGHT<br>ARCADE",
+        imgDesktop: NightArcadeImageD,
+        imgMobile: NightArcadeImageM
+    },
+    {
+        name: "SOCCER<br>TEAM VR",
+        imgDesktop: SoccerImageD,
+        imgMobile: SoccerImageM
+    },
+    {
+        name: "THE<br>GRID",
+        imgDesktop: GridImageD,
+        imgMobile: GridImageM
+    },
+    {
+        name: "FROM UP<br>AVOBE VR",
+        imgDesktop: FromAboveImageD,
+        imgMobile: FromAboveImageM
+    },
+    {
+        name: "POCKET<br>BOREALIS",
+        imgDesktop: BorealisImageD,
+        imgMobile: BorealisImageM
+    },
+    {
+        name: "THE<br>CURIOSITY",
+        imgDesktop: CuriosityImageD,
+        imgMobile: CuriosityImageM
+    },
+    {
+        name: "MAKE IT<br>FISHEYE",
+        imgDesktop: FisheyeImageD,
+        imgMobile: FisheyeImageM
+    }
+]
+
+---
+
+<section class="flex flex-col justify-center items-center w-full mb-28">
+
+    <div class="flex justify-center sm:justify-between items-center py-18 px-30 font-josefin w-full">
+        <h3 class="text-3xl md:text-4xl font-light">OUR CREATIONS</h3>
+        <button class="hidden sm:block border border-black font-semibold tracking-wide text-xs px-8 py-2">SEE ALL</button>
+    </div>
+
+    <div class="flex flex-col justify-center items-center
+    sm:grid sm:grid-cols-2 
+    md:grid-cols-3
+    xl:grid-cols-4 lg:gap-8 lg:px-30">
+        {
+            creations.map((creation) => (
+                <div class="relative mb-8 px-2 max-w-[500px] sm:w-[250px]">
+
+                    <picture>
+                        <source media="(min-width: 641px)" srcset={creation.imgDesktop.src} /> 
+                        <img src={creation.imgMobile.src} alt={creation.name}  class="w-full h-full object-cover" />
+                    </picture>
+            
+                    <div class="absolute bottom-2 sm:bottom-5 left-6 sm::left-8 z-10"> 
+                        <h4 class="font-josefin font-light text-2xl sm:text-3xl text-white" set:html={creation.name}></h4>
+                    </div>
+
+                </div>
+            ))
+        }
+         <button class="sm:hidden border border-black font-semibold tracking-wide text-xs px-8 py-2">SEE ALL</button>
+    </div>
+</section>

@@ -1,0 +1,74 @@
+---
+import Logo from '../assets/icons/logo.svg';
+---
+
+<header class="text-white absolute top-0 left-0 right-0 z-50 w-full">
+  <div class="flex justify-between items-center py-4 px-4 sm:py-8 sm:px-16 lg:py-10 lg:px-30">
+    <picture>
+      <img src={Logo.src} alt="Logo"/>
+    </picture>
+
+
+    <nav class="hidden lg:flex gap-8 font-alata">
+      <ul class="flex gap-8">
+        <li><a href="#" class="hover-underline">About</a></li>
+        <li><a href="#" class="hover-underline">Careers</a></li>
+        <li><a href="#" class="hover-underline">Events</a></li>
+        <li><a href="#" class="hover-underline">Products</a></li>
+        <li><a href="#" class="hover-underline">Support</a></li>
+      </ul>
+    </nav>
+    
+    <button id="hamburger-button" class="lg:hidden">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-12 sm:w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <div id="mobile-menu" class="fixed inset-0 flex-col hidden bg-black p-8 sm:p-16 h-screen">
+      <div class="flex justify-between items-center">
+        <picture>
+          <img src={Logo.src} alt="Logo" class="w-32 sm:w-58"/>
+        </picture>
+        <button id="cross-button">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 sm:h-16 sm:w-16 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="cross-icon">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <nav class="font-josefin font-extralight text-2xl sm:text-4xl uppercase mt-32">
+        <ul class="flex flex-col gap-6">
+          <li><a href="#" class="hover-underline">About</a></li>
+          <li><a href="#" class="hover-underline">Careers</a></li>
+          <li><a href="#" class="hover-underline">Events</a></li>
+          <li><a href="#" class="hover-underline">Products</a></li>
+          <li><a href="#" class="hover-underline">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+</header>
+
+<script>
+
+const hamburgerButton = document.getElementById("hamburger-button");
+  const crossButton = document.getElementById("cross-button");
+  const hamburgerIcon = document.getElementById("hamburger-icon");
+  const crossIcon = document.getElementById("cross-icon");
+  const menu = document.getElementById("mobile-menu");
+
+  if (hamburgerButton) {
+    hamburgerButton.addEventListener("click", () => toggleMenu());
+  }
+
+  if (crossButton) {
+    crossButton.addEventListener("click", () => toggleMenu());
+  }
+
+  function toggleMenu() {
+    if (menu && hamburgerIcon && crossIcon) {
+      hamburgerIcon.classList.toggle("hidden");
+      crossIcon.classList.toggle("hidden");
+      menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+    }
+  }
+</script>

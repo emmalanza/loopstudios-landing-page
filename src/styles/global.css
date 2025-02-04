@@ -1,0 +1,32 @@
+@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Alata:regular);
+@import "tailwindcss";
+
+@theme {
+    --color-darkGray: #8c8c8c;
+    --color-veryDarkGray: #696969;
+
+    --font-josefin: "Josefin Sans", sans-serif;
+    --font-alata: "Alata", sans-serif;
+  }
+
+
+.hover-underline {
+  position: relative; 
+  text-decoration: none; 
+  color: inherit; 
+  display: inline-block; 
+  transition: color 0.3s ease; 
+}
+
+.hover-underline:hover::after {
+  content: ""; 
+  position: absolute; 
+  bottom: -2px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 50%; 
+  height: 2px; 
+  background-color: currentColor; 
+  opacity: 1;
+}
