@@ -7,12 +7,12 @@ import HeroImageMobile from '../assets/images/mobile/image-hero.jpg';
 <section class="relative h-[550px] w-full">
   <picture>
     <source media="(min-width: 641px)" srcset={HeroImageDesktop.src} /> 
-    <img src={HeroImageMobile.src} alt="Hero Image" class="w-full h-full object-cover" />
+    <img src={HeroImageMobile.src} alt="Hero Image" class="w-full h-full object-cover" loading="lazy"/>
   </picture>
   
     <div class="absolute inset-0 flex justify-center items-center sm:justify-start text-white">
       <div class="border border-white z-10 sm:ml-16 lg:ml-30 p-6">
-        <h1 class="text-4xl sm:text-6xl font-josefin font-light max-w-[250px] sm:max-w-[500px] overflow-hidden">IMMERSIVE EXPIERIENCES THAT DELIVER</h1>
+        <h1 class="text-4xl sm:text-6xl font-josefin font-light max-w-[250px] sm:max-w-[500px] overflow-hidden">IMMERSIVE EXPERIENCES THAT DELIVER</h1>
       </div>
     </div>
   </section>

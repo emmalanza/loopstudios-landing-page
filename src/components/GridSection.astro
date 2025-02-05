@@ -79,7 +79,7 @@ const creations: any [] = [
 
                     <picture>
                         <source media="(min-width: 641px)" srcset={creation.imgDesktop.src} /> 
-                        <img src={creation.imgMobile.src} alt={creation.name}  class="w-full h-full object-cover" />
+                        <img src={creation.imgMobile.src} alt={creation.name}  class="w-full h-full object-cover" loading="lazy" />
                     </picture>
             
                     <div class="absolute bottom-2 sm:bottom-5 left-6 sm::left-8 z-10"> 
