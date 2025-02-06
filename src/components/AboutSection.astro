@@ -3,18 +3,23 @@ import InteractiveImageDesktop from '../assets/images/desktop/image-interactive.
 import InteractiveImageMobile from '../assets/images/mobile/image-interactive.jpg'; 
 ---
 
-<section class="flex lg:h-[650px] lg:py-28">
-    <div class="flex flex-col justify-center items-center p-10 lg:relative lg:ml-30">
+<section class="flex lg:h-[650px] mt-16 lg:mt-8">
+    <div class="flex flex-col justify-center items-center p-10 w-full lg:w-auto lg:relative lg:ml-30 lg:p-0">
         <picture>
-            <source media="(min-width: 641px)" srcset={InteractiveImageDesktop.src} /> 
-            <img src={InteractiveImageMobile.src} alt="Interactive Image" class="lg:w-[700px]" loading="lazy"/>
+            <source media="(min-width: 1024px)" srcset={InteractiveImageDesktop.src} /> 
+            <img src={InteractiveImageMobile.src} alt="Interactive Image" class="lg:w-[575px]" loading="lazy"/>
         </picture>
-        <div class="bg-white flex flex-col justify-center items-center mt-4 gap-2
-        lg:absolute lg:top-1/2 lg:left-2/3 lg:z-10 lg:w-[500px] lg:p-18">
-            <h2 class="font-josefin font-light text-center text-2xl max-w-[200px] lg:text-4xl lg:max-w-[300px] lg:mb-6">
+        <div class="bg-white flex flex-col justify-center items-center gap-2 mt-8 lg:mt-0
+        lg:items-start lg:absolute lg:top-1/2 lg:left-2/3 lg:z-10 lg:py-18 lg:pl-16 lg:w-[450px] xl-[650px]">
+            <h2 class="font-josefin font-light text-center text-2xl max-w-[200px] 
+            sm:text-3xl sm:max-w-[300px] 
+            lg:text-4xl lg:max-w-[400px] lg:mb-6">
                 THE LEADER IN INTERACTIVE VR
             </h2>
-            <p class="font-alata lg:max-w-[400px] max-w-[320px] text-center text-xs line-clamp-6 leading-5 lg:text-sm text-darkGray">
+            <p class="font-alata md:max-w-[400px] max-w-[320px] 
+            text-center line-clamp-6 leading-5 
+            text-xs sm:text-sm md:text-base
+            text-darkGray">
                 Founded in 2011, Loopstudios has been producing world-class 
                 virtual reality projects for some of the best companies around the globe. 
                 Our award-winning creations have transformed businesses 

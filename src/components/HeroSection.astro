@@ -4,10 +4,10 @@ import HeroImageMobile from '../assets/images/mobile/image-hero.jpg';
 ---
 
 
-<section class="relative h-[550px] w-full">
+<section class="relative w-full">
   <picture>
-    <source media="(min-width: 641px)" srcset={HeroImageDesktop.src} /> 
-    <img src={HeroImageMobile.src} alt="Hero Image" class="w-full h-full object-cover" loading="lazy"/>
+    <source media="(min-width: 640px)" srcset={HeroImageDesktop.src} /> 
+    <img src={HeroImageMobile.src} alt="Hero Image" class="w-full h-dvh sm:h-[500px] object-cover" loading="lazy"/>
   </picture>
   
     <div class="absolute inset-0 flex justify-center items-center sm:justify-start text-white">

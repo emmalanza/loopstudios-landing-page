@@ -62,23 +62,30 @@ const creations: any [] = [
 
 ---
 
-<section class="flex flex-col justify-center items-center w-full mb-28">
+<section class="flex flex-col justify-center items-center w-full lg:mt-24 mb-24">
 
-    <div class="flex justify-center sm:justify-between items-center py-18 px-30 font-josefin w-full">
+    <div class="flex justify-center xl:justify-between items-center p-5 lg:py-18 lg:px-30 font-josefin w-full">
         <h3 class="text-3xl md:text-4xl font-light">OUR CREATIONS</h3>
-        <button class="hidden sm:block border border-black font-semibold tracking-wide text-xs px-8 py-2">SEE ALL</button>
+        <button class="hidden xl:block border border-black font-semibold tracking-wide text-xs px-8 py-2">SEE ALL</button>
     </div>
 
-    <div class="flex flex-col justify-center items-center
-    sm:grid sm:grid-cols-2 
-    md:grid-cols-3
-    xl:grid-cols-4 lg:gap-8 lg:px-30">
+    <div class="flex flex-col justify-center items-center mt-5 w-full px-5
+    md:grid md:grid-cols-2 md:gap-4  md:px-10
+    lg:gap-6 lg:px-30 lg:p-0
+    xl:grid-cols-4 xl:gap-11
+    2xl:gap-18">
         {
             creations.map((creation) => (
-                <div class="relative mb-8 px-2 max-w-[500px] sm:w-[250px]">
+                <div class="relative mb-8 max-w-[500px] 
+                sm:w-[600px]
+                md:w-[340px]
+                lg:w-[375px]
+                xl:max-w-[225px]
+                2xl:max-w-[251px]
+                ">
 
                     <picture>
-                        <source media="(min-width: 641px)" srcset={creation.imgDesktop.src} /> 
+                        <source media="(min-width: 1280px)" srcset={creation.imgDesktop.src} /> 
                         <img src={creation.imgMobile.src} alt={creation.name}  class="w-full h-full object-cover" loading="lazy" />
                     </picture>
             
@@ -89,6 +96,6 @@ const creations: any [] = [
                 </div>
             ))
         }
-         <button class="sm:hidden border border-black font-semibold tracking-wide text-xs px-8 py-2">SEE ALL</button>
     </div>
+    <button class="xl:hidden border border-black font-semibold tracking-wide text-xs px-8 py-2 self-center">SEE ALL</button>
 </section>
