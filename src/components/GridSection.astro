@@ -66,7 +66,8 @@ const creations: any [] = [
 
     <div class="flex justify-center xl:justify-between items-center p-5 lg:py-18 lg:px-30 font-josefin w-full">
         <h3 class="text-3xl md:text-4xl font-light">OUR CREATIONS</h3>
-        <button class="hidden xl:block border border-black font-semibold tracking-wide text-xs px-8 py-2">SEE ALL</button>
+        <button class="hidden xl:block border border-black font-semibold tracking-wide text-xs px-8 py-2
+        hover:bg-black hover:text-white transition duration-300">SEE ALL</button>
     </div>
 
     <div class="flex flex-col justify-center items-center mt-5 w-full px-5
@@ -82,20 +83,34 @@ const creations: any [] = [
                 lg:w-[375px]
                 xl:max-w-[225px]
                 2xl:max-w-[251px]
-                ">
+                group">
 
                     <picture>
-                        <source media="(min-width: 1280px)" srcset={creation.imgDesktop.src} /> 
-                        <img src={creation.imgMobile.src} alt={creation.name}  class="w-full h-full object-cover" loading="lazy" />
+                    <source media="(min-width: 1280px)" srcset={creation.imgDesktop.src} />
+                    <img 
+                        src={creation.imgMobile.src} 
+                        alt={creation.name}  
+                        class="w-full h-full object-cover transition duration-300 ease-in-out group-hover:opacity-50" 
+                        loading="lazy" 
+                    />
+                    <div class="absolute inset-0 bg-black opacity-40 shadow-lg rounded 
+                    group-hover:bg-white group-hover:opacity-10 transition duration-300 ease-in-out"></div>
                     </picture>
+                    
             
                     <div class="absolute bottom-2 sm:bottom-5 left-6 sm::left-8 z-10"> 
-                        <h4 class="font-josefin font-light text-2xl sm:text-3xl text-white" set:html={creation.name}></h4>
+                        <h4 class="font-josefin font-light text-2xl sm:text-3xl text-white
+                        group-hover:text-black transition duration-300 ease-in-out" set:html={creation.name}></h4>
                     </div>
 
                 </div>
             ))
         }
+
     </div>
-    <button class="xl:hidden border border-black font-semibold tracking-wide text-xs px-8 py-2 self-center">SEE ALL</button>
+    <button class="xl:hidden border border-black font-semibold tracking-wide text-xs px-8 py-2 self-center
+    hover:bg-black transition duration-300">
+        SEE ALL
+    </button>
+ 
 </section>
